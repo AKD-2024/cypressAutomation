@@ -36,6 +36,15 @@ describe("C1 App", () => {
     cy.visit("https://micro-nemo.comprodls.com/dashboard/learner/dashboard");
     learnerPracticePage.practicePE();
     cy.wait(2000);
+    // learnerPracticePage.submitScorable();
+    // cy.wait(2000);
+    // learnerPracticePage.startOver();
+    // cy.wait(2000);
+    // learnerPracticePage.submitScorable();
+    // Loop to run submitScorable 3 times
     learnerPracticePage.submitScorable();
+    cy.wait(2000);
+    learnerPracticePage.tocHandler();
+    cy.wait(2000);
   });
 });
